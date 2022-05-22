@@ -4,17 +4,18 @@ $color-text:#315DF9;
 
 //MAIN
 
-.main__container{
-    padding: 11px 16px 36px 16px;
-}
+
 
 //Header
 .main__container{
-    max-width: 320px;
+    width: 320px;
+    height: 568px;
     display: block;
+    padding: 11px 16px 36px 16px;
 }
 
 .main__header{
+    width: 320px;
     padding: 14px 0px 1px 21px;
     background-color: $color-active;   
     color: $color-blue-sky;
@@ -33,7 +34,7 @@ $color-text:#315DF9;
 }
 
 .main__desc{
-    margin: 0;
+    margin-bottom: 10px;
     padding: 0;
     font-weight: 700;
     font-size: 12px;
@@ -70,6 +71,7 @@ $color-text:#315DF9;
 //content
 
 .main__text--title{
+    margin: 10px 0px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -80,6 +82,8 @@ $color-text:#315DF9;
 }
 
 .main__text{
+    margin: 0;
+    padding: 9px 0px 9px 0px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -97,6 +101,8 @@ $color-text:#315DF9;
 
 .form__radio--container{
     padding: 25px 25px 17px 17px;
+    background-color: #F3F4F8;
+    margin-bottom: 12px;
 }
 .main__form--item{
     text-align: center;
@@ -114,9 +120,46 @@ $color-text:#315DF9;
     margin-left: 26px;
 }
 
+.form__button--container{
+    visibility: hidden;
+    transform: translateY(20px);
+    margin-bottom: 80px;
+}
+
+.form__button--container.is-open {
+    visibility: visible;
+    transition: all 1.5s;
+    transform: translateY(0%);
+  }
+
+.form__button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 186px;
+    height: 45px;
+    background: #315DFA;
+    border: 1px solid #315DFA;
+    color: #fff;
+}  
+
 .main__footer{
     margin: 0;
     padding: 0;
     text-align: center;
-    color: #D6D6D6;
+    color: black;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 22px;  
+}
+.main__footer--start{
+    margin-top: 12px;
+}
+.main__footer--end{
+    margin-top: 80px;
+}
+.is-active{
+    visibility: hidden;        
 }

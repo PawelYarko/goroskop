@@ -10,7 +10,10 @@ $color-text:#315DF9;
 .main__container{
     width: 320px;
     height: 568px;
-    display: block;
+    display: block; 
+}
+
+.main__content{
     padding: 11px 16px 36px 16px;
 }
 
@@ -97,6 +100,7 @@ $color-text:#315DF9;
     padding: 16px 22px 8px 21px;
     background-color: #343B4D;
     text-align: center;
+    color: white;
 }
 
 .form__radio--container{
@@ -122,6 +126,7 @@ $color-text:#315DF9;
 
 .form__button--container{
     visibility: hidden;
+    width: 320px;
     transform: translateY(20px);
     margin-bottom: 80px;
 }
@@ -144,6 +149,7 @@ $color-text:#315DF9;
 }  
 
 .main__footer{
+    max-width: 320px;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -158,7 +164,8 @@ $color-text:#315DF9;
     margin-top: 12px;
 }
 .main__footer--end{
-    margin-top: 80px;
+    width: 320px;
+    margin-top: 20px;
 }
 .is-active{
     visibility: hidden;        

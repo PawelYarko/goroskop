@@ -2,38 +2,41 @@ import './sass/main.scss';
 
 const refs ={
     form: document.querySelector('.main__form'),
-    footerEl: document.querySelector('.main__footer--start'),
+    footerElStart: document.querySelector('.main__footer--start'),
+    footerElEnd: document.querySelector('.main__footer--end'),
+    btnContainer: document.querySelector('.form__button--container'),
+    radioBtns: document.querySelectorAll('.form__radio-btn'),
+    formBtn: document.querySelector('.form__button'),
+    mainContaer: document.querySelector('.main__content'),
 }
 
-function onEntry(entry) {
-  entry.forEach(change => {
-    if (change.isIntersecting) {
-     change.target.classList.toggle('is-open');
-    }
-  });
-  createFooter();
+let sex = '';   
+
+refs.form.addEventListener('change', onRadioBtnCkick);
+refs.form.addEventListener('submit', onBtnSubmitClick);
+
+function newFooter(){
+    refs.footerElStart.classList.toggle('is-active');
+    refs.btnContainer.classList.toggle('is-open');
+    refs.footerElEnd.classList.toggle('is-active'); 
 }
 
-
-
-function createFooter(){
-    refs.footerEl.classList.toggle('is-active')
-    const footer = `<p class="main__footer main__footer--end">2020 © HOROSCOP PERSONAL</p>`;
-    console.log(refs.footerEl)
-    refs.form.insertAdjacentHTML("beforeend", footer);
-}
-
-let options = {
-    threshold: [0.5] };
-  let observer = new IntersectionObserver(onEntry, options);
-  let elements = document.querySelectorAll('.form__button--container');
-  
-  for (let elm of elements) {
-    observer.observe(elm);
-  }
-
-refs.form.addEventListener('submit', formSubmit)
-
-function formSubmit(e){
+function onRadioBtnCkick(e){
     e.preventDefault();
+     
+
+    for(const radioBtn of refs.radioBtns){
+        if(radioBtn.checked){
+            sex = radioBtn.value;
+            newFooter();
+        }
+    }
+}
+
+function onBtnSubmitClick(e){
+    e.preventDefault();
+    // console.log(sex);
+    refs.mainContaer.classList.add('is-active'); 
+    
+
 }

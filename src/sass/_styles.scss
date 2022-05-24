@@ -9,7 +9,6 @@ $color-text:#315DF9;
 //Header
 .main__container{
     width: 320px;
-    height: 568px;
     display: block; 
 }
 
@@ -128,7 +127,6 @@ $color-text:#315DF9;
     visibility: hidden;
     width: 320px;
     transform: translateY(20px);
-    margin-bottom: 80px;
 }
 
 .form__button--container.is-open {
@@ -161,11 +159,10 @@ $color-text:#315DF9;
     line-height: 22px;  
 }
 .main__footer--start{
-    margin-top: 12px;
+    margin-top: 0px;
 }
 .main__footer--end{
-    width: 320px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .is-active{
     visibility: hidden;        

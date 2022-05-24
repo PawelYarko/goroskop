@@ -42,3 +42,26 @@
 .time__form-item{
     margin: 30px auto 30px 15px;
 }
+
+.time__form--container{
+    visibility: hidden;
+    width: 320px;
+    transform: translateY(20px);
+}
+
+.time__form--container.is-open {
+    visibility: visible;
+    transition: all 1.5s;
+    transform: translateY(0%);
+  }
+
+.time__form{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 186px;
+    height: 45px;
+    background: #315DFA;
+    border: 1px solid #315DFA;
+    color: #fff;
+}  

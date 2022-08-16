@@ -1,4 +1,6 @@
-
+import { Link } from 'react-router-dom';
+import ButtonNext from '../ButtonNext/ButtonNext';
+import s from '../Home/Home.module.css';
 
 const Day = () => {
 
@@ -24,6 +26,7 @@ return(
             День                
           </label>
       </form>
+      <Link className={s.button} to="/day"><ButtonNext/></Link>
     </>
 );
 }

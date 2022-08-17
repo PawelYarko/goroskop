@@ -1,12 +1,12 @@
 import { Link, useLocation} from 'react-router-dom';
 import { useState } from 'react';
 import ButtonBack from '../ButtonBack/ButtonBack';
-import ButtonNext from '../ButtonNext/ButtonNext';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
+import Button from '@mui/material/Button';
 import s from '../Home/Home.module.css';
 
 const Day = () => {
@@ -28,13 +28,13 @@ return(
         name="radio-buttons-group"
         onChange={(e) => setDay(e.target.value)}
       >
-        <FormControlLabel value="Утро" control={<Radio />} label="Утро" />
-        <FormControlLabel value="Ночь" control={<Radio />} label="Ночь" />
-        <FormControlLabel value="Вечер" control={<Radio />} label="Вечер" />
-        <FormControlLabel value="День" control={<Radio />} label="День" />
+        <FormControlLabel value="morning" control={<Radio />} label="Утро" />
+        <FormControlLabel value="night" control={<Radio />} label="Ночь" />
+        <FormControlLabel value="evening" control={<Radio />} label="Вечер" />
+        <FormControlLabel value="day" control={<Radio />} label="День" />
       </RadioGroup>
     </FormControl>
-  {day && <Link className={s.button} to="/night"><ButtonNext/></Link>}
+  {day && <Link className={s.button} to="/night" ><Button type="submit" variant="contained">Далее</Button></Link>}
   </>
 );
 }

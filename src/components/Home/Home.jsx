@@ -5,11 +5,12 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
-import ButtonNext from '../ButtonNext/ButtonNext';
+import Button from '@mui/material/Button';
 import s from './Home.module.css';
 
 const Home = () => {  
   const [gender, setGender] = useState(null);
+  console.log(gender)
     return (
       <>
       <img src="" alt=""/>
@@ -25,11 +26,11 @@ const Home = () => {
         name="radio-buttons-group"
         onChange={(e) => setGender(e.target.value)}
       >
-        <FormControlLabel control={<Radio />}value="Женщина" label="Female" />
-        <FormControlLabel control={<Radio />} value="Мужчина" label="Male" />
+        <FormControlLabel value="Female" control={<Radio />} label="Женщина" />
+        <FormControlLabel value="Male" control={<Radio />}  label="Мужчина" />
       </RadioGroup>
     </FormControl>
-    {gender && <Link className={s.button} to="/day"><ButtonNext/></Link>}
+    {gender && <Link className={s.button} to="/day" ><Button type="submit" variant="contained">Далее</Button></Link>}
       </>
     );
   };

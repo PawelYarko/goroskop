@@ -1,5 +1,5 @@
 import { Routes , Route, Navigate} from 'react-router-dom';
-import AppBar from '../AppBar/AppBar';
+// import AppBar from '../AppBar/AppBar';
 import Home from '../Home/Home';
 import Day from '../Day/Day';
 import Night from '../Night/Night';
@@ -10,7 +10,7 @@ import Birthday from '../Birthday/Birthday';
 export const App = () => {
   return (
     <>
-    <AppBar />
+    {/* <AppBar /> */}
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/day" element={<Day/>}/>

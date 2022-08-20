@@ -6,6 +6,7 @@ import Night from '../Night/Night';
 import Plan from '../Plan/Plan';
 import Year from '../Year/Year';
 import Birthday from '../Birthday/Birthday';
+import CheckValue from 'components/CheckValue/CheckValue';
 
 export const App = () => {
   return (
@@ -18,6 +19,8 @@ export const App = () => {
       <Route path="/plan" element={<Plan/>}/>
       <Route path="/year" element={<Year/>}/>
       <Route path="/birthday" element={<Birthday/>}/>
+      <Route path="/checkvalue" element={<CheckValue/>}/>
+      <Route path="/getresult" element={<GetResult/>}/>
       <Route path="*" element={<Navigate replace to="/" />} />
     </Routes>
     </>

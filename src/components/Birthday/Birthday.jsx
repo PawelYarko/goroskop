@@ -1,9 +1,12 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import Button from '@mui/material/Button';
+import s from '../Home/Home.module.css';
 
 const Birthday = () => {
 
@@ -24,6 +27,7 @@ const Birthday = () => {
     };
   
     return (
+      <>
       <Box sx={{ minWidth: 120 }}>
         <FormControl sx={{ minWidth: 120 }}>
           <InputLabel id="demo-simple-select-label">Day</InputLabel>
@@ -63,6 +67,8 @@ const Birthday = () => {
           </Select>
         </FormControl>
       </Box>
+      <Link className={s.button} to="/checkvalue" ><Button type="submit" variant="contained">Далее</Button></Link>
+      </>
     );
   }
     export default Birthday;

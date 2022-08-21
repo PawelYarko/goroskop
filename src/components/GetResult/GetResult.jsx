@@ -1,4 +1,6 @@
-
+import { Link } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import s from '../Home/Home.module.css';
 
 const GetResult = () =>{
     return(

@@ -6,7 +6,7 @@ import Night from '../Night/Night';
 import Plan from '../Plan/Plan';
 import Year from '../Year/Year';
 import Birthday from '../Birthday/Birthday';
-import CheckValue from 'components/CheckValue/CheckValue';
+import CheckValue from '../CheckValue/CheckValue';
 
 export const App = () => {
   return (

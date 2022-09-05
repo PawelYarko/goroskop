@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import useLocalStorage from '../../useLocalStorage/useLocalStorage';
 import ButtonBack from '../ButtonBack/ButtonBack';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
@@ -12,6 +13,14 @@ import s from '../Home/Home.module.css';
 
 const Year = () => {  
   const[year, setYear] = useState(null);
+  const [locStorage, setLocStorage] = useLocalStorage('year', []);
+
+  useEffect(() => {
+    if (year) {
+      setLocStorage({year});
+    }
+  }, [year]);
+
   const location = useLocation();
 
   const backLinkHref = location.state?.from ?? '/';

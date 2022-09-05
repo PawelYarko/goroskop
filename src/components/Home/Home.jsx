@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import useLocalStorage from '../../useLocalStorage/useLocalStorage';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -10,7 +11,13 @@ import s from './Home.module.css';
 
 const Home = () => {  
   const [gender, setGender] = useState(null);
-  console.log(gender)
+  const [locStorage, setLocStorage] = useLocalStorage('gender', []);
+
+  useEffect(() => {
+    if (gender) {
+      setLocStorage({gender});
+    }
+  }, [gender]);
     return (
       <>
       <img src="" alt=""/>
